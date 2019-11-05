@@ -1,14 +1,15 @@
 /* jshint node: true */
 'use strict';
+const BroccoliDebug = require('broccoli-debug');
 
 module.exports = {
   name: 'ember-dropkick',
 
-  included: function(app) {
+  included(app) {
     this._super.included(app);
 
-    app.import(app.bowerDirectory + '/dropkick/build/js/dropkick.min.js');
-    app.import(app.bowerDirectory + '/dropkick/build/css/dropkick.css');
+    app.import(app.bowerDirectory + '/dropkick/dist/dropkick.js');
+    app.import(app.bowerDirectory + '/dropkick/dist/dropkick.css');
   }
 
 };
